@@ -36,8 +36,8 @@ class ConcatFeatures(TabularAggregation):
         self,
         inputs: TabularData,
     ) -> torch.Tensor:
-        self._expand_non_sequential_features(inputs)
-        self._check_concat_shapes(inputs)
+        #self._expand_non_sequential_features(inputs)
+        #self._check_concat_shapes(inputs)
 
         tensors = []
         for name in sorted(inputs.keys()):
@@ -67,8 +67,8 @@ class StackFeatures(TabularAggregation):
         self.axis = axis
 
     def forward(self, inputs: TabularData) -> torch.Tensor:
-        self._expand_non_sequential_features(inputs)
-        self._check_concat_shapes(inputs)
+        #self._expand_non_sequential_features(inputs)
+        #self._check_concat_shapes(inputs)
 
         tensors = []
         for name in sorted(inputs.keys()):
